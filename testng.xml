@@ -5,4 +5,10 @@
             <class name="tests.Login" />
         </classes>
     </test>
+
+    <test name="CityCheck">
+        <classes>
+            <class name="tests.City"/>
+        </classes>
+    </test>
 </suite>

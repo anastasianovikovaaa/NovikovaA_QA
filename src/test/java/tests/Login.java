@@ -12,10 +12,8 @@ public class Login extends TestSettings {
         LoginPage lpage = new LoginPage(driver);
         lpage.enteringLogin("peter.parkerrr");
         lpage.enteringPassword("FriendlyNeighborhoodSpiderMan");
-
         fpage.myProfile();
         fpage.checkLogin();
-
     }
 }
 
