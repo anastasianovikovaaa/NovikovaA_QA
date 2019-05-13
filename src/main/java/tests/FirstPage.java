@@ -74,4 +74,12 @@ public class FirstPage {
         getAccount().click();
         driver.findElement(By.xpath("//a[text()='Мои адреса доставки']/..")).click();
     }
+
+    @Step("Перейти в каталог электрических зубных щеток")
+    public void pathToCatalog() {
+        driver.findElement(By.cssSelector("[class *= 'button2_size_ml button2_theme_search']")).click();
+        (new Actions(driver)).moveToElement(driver.findElement(By
+                .xpath("//span[text()='Красота и гигиена']"))).build().perform();
+        driver.findElement(By.xpath("//a[text()='Электрические зубные щетки']")).click();
+    }
 }

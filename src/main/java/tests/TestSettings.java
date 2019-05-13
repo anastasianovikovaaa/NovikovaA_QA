@@ -17,6 +17,12 @@ public class TestSettings {
         return driver;
     }
 
+    private static String SAVE_SCREEN_FOLDER = "E:\\QA\\SCREENSHOTS";
+
+    public static String getSaveScreenFolder() {
+        return SAVE_SCREEN_FOLDER;
+    }
+
     @BeforeMethod
     public void preparation() {
         System.setProperty("webdriver.chrome.driver", "C:\\chromedriver_win32\\chromedriver.exe");
