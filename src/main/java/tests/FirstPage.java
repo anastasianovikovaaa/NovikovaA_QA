@@ -10,7 +10,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import java.security.Key;
 
 public class FirstPage {
     private static WebDriver driver;
@@ -49,14 +48,16 @@ public class FirstPage {
                 .cssSelector("[class*='region-suggest'] [class*='input__control']"));
         newCity.click();
         newCity.sendKeys(city);
+        // Явное ожидание, что в выпадающем списке название города такое же, как во введённом
         (new WebDriverWait(driver, 15))
                 .until(ExpectedConditions.visibilityOf(newCity.findElement(By
                         .xpath("//strong[text() = '" + city + "']"))));
-        newCity.sendKeys(Keys.ENTER);
 
+        newCity.sendKeys(Keys.ENTER);
+        // Наводим на кнопку "Продолжить" курсор
         (new Actions(driver)).moveToElement(cityForm.findElement(By
                 .cssSelector("[class*='button2__text']"))).build().perform();
-
+        // Получаем код кнопки (код для наведения и для клика разный) и кликаем
         cityForm.findElement(By
                 .cssSelector("[class *= 'region-select-form__continue-with-new i-bem button2']")).click();
         driver.navigate().refresh(); // перезагрузить страницу

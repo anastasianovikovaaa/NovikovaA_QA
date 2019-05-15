@@ -8,7 +8,13 @@
 
     <test name="CityCheck">
         <classes>
-            <class name="tests.City"/>
+            <class name="tests.ChangeCityTest"/>
         </classes>
     </test>
+
+        <test name="ToothBrushes">
+            <classes>
+                <class name="tests.ToothBrushes"/>
+            </classes>
+        </test>
 </suite>

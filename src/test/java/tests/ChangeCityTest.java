@@ -1,9 +1,11 @@
 package tests;
 
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-public class City extends TestSettings {
+@Listeners(FailureListener.class)
+public class ChangeCityTest extends TestSettings {
     // метод, который подготавливает данные для теста
     @DataProvider(name="cityProvider")
     public Object[][] getCity(){
