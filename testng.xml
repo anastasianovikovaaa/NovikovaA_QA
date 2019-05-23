@@ -1,20 +1,28 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="TestSuite">
-    <test name="LoginTest">
+<!--    <test name="LoginTest">-->
+<!--        <classes>-->
+<!--            <class name="tests.Login" />-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="CityCheck">-->
+<!--        <classes>-->
+<!--            <class name="tests.ChangeCityTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="ToothBrushes">-->
+<!--        <classes>-->
+<!--            <class name="tests.ToothBrushes"/>-->
+<!--         </classes>-->
+<!--    </test>-->
+
+    <test name="BicyclesTest">
         <classes>
-            <class name="tests.Login" />
+            <class name="tests.BicyclesTest"/>
         </classes>
     </test>
 
-    <test name="CityCheck">
-        <classes>
-            <class name="tests.ChangeCityTest"/>
-        </classes>
-    </test>
 
-        <test name="ToothBrushes">
-            <classes>
-                <class name="tests.ToothBrushes"/>
-            </classes>
-        </test>
 </suite>

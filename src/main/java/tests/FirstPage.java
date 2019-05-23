@@ -83,4 +83,13 @@ public class FirstPage {
                 .xpath("//span[text()='Красота и гигиена']"))).build().perform();
         driver.findElement(By.xpath("//a[text()='Электрические зубные щетки']")).click();
     }
+
+    @Step("Перейти в каталог велосипедов")
+    public void pathToBicyclesCatalog() {
+        driver.findElement(By.cssSelector("[class *= 'button2_size_ml button2_theme_search']")).click();
+        (new Actions(driver)).moveToElement(driver.findElement(By
+                .xpath("//span[text()='Спорт и отдых']"))).build().perform();
+        driver.findElement(By.xpath("(//span[text()='Велоспорт'])[2]/..")).click();
+    }
+
 }
